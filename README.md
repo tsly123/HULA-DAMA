@@ -59,7 +59,7 @@ Due to computational resource, DAMA is trained **only once** without any ablatio
 
 ### Pre-training DAMA
 ```
-python submitit_pretrain.py --arch main_vit_tiny \
+python submitit_pretrain.py --arch main_vit_base \
       --batch_size 64 --epochs 500 --warmup_epochs 40 \
       --mask_ratio 0.8 --mask_overlap_ratio 0.5 --last_k_blocks 6 --norm_pix_loss \
       --data_path path_to_dataset_folder \
@@ -70,7 +70,7 @@ python submitit_pretrain.py --arch main_vit_tiny \
 
 ### Fine-tuning DAMA for cell classification
 ```
-python submitit_finetune.py --arch main_vit_tiny \
+python submitit_finetune.py --arch main_vit_base \
       --batch_size 128 --epochs 150  \
       --data_path path_to_dataset_folder \
       --finetune path_to_pretrained_file \
