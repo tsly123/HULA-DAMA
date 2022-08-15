@@ -9,7 +9,7 @@ DAMA utilizes contextual information and performs better than other methods. Ple
 
 * This repo is based on PyTorch=1.10.1 and timm=0.5.4
 
-Below is the fine-tune result of DAMA compared to other state-of-the-art methods pretrained on **brain cells dataset** and **ImageNet-1k**. Please see the paper for detailed results.
+Below is the fine-tune result of DAMA compared to other state-of-the-art methods pretrained on **brain cells dataset** and **ImageNet-1k**. 
 
 ### Brain Cell datasets
 Please see the Supplementary Materials for more results and figures.
