@@ -13,6 +13,7 @@ Below is the fine-tune result of DAMA compared to other state-of-the-art methods
 
 ### Brain Cell datasets
 Please see the Supplementary Materials for more results and figures.
+
 ***Cell Classification***
 |                    | 0     | 1     | 2     | 3     | 4     | 5     | 6     | 7     | 8     | 9     | Avg. &#8593;          | Err. &#8595; |
 |--------------------|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:--------------------------:|:-------------------:|
