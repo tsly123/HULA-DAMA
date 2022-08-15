@@ -39,6 +39,7 @@ Please see the Supplementary Materials for more results and figures.
 
 ### Pretrained on ImageNet-1k with ViT-Base
 Due to computational resource, DAMA is trained **only once** without any ablation experiment for ImageNet and with similar configuration as for trained the brain cell dataset.
+
 | Methods | Pre-trained epochs | Acc.  |
 |-----------------------------|:--------------------:|:-------:|
 | Moco-v3                     | 600                | 83.2  |
