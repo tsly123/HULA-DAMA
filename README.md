@@ -7,7 +7,7 @@ This is a PyTorch/GPU implementation of the paper Student Collaboration Improves
 Below is the fine-tune result of DAMA compared to other state-of-the-art methods pretrained on **brain cells dataset** and **ImageNet-1k**. Please see the paper for detailed results.
 
 ### Brain Cell datasets
-# Cell Classification
+##### Cell Classification
 |                    | 0     | 1     | 2     | 3     | 4     | 5     | 6     | 7     | 8     | 9     | Avg. &#8593;          | Err. &#8595; |
 |--------------------|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:--------------------------:|:-------------------:|
 | Random   init.     | 91.75 | 91.19 | 92.75 | 92.69 | 92.56 | 92.31 | 91.44 | 91.06 | 93    | 91.06 | 91.98(+0.00)             | 8.02              |
@@ -17,7 +17,7 @@ Below is the fine-tune result of DAMA compared to other state-of-the-art methods
 | DAMA-rand 500 (3h) | 94.69 | 94.19 | 94.81 | 95.81 | 94.50 | 94.00 | 94.88 | 94.69 | 95.25 | 94.81 | 94.76(+2.78) | 5.24  |
 | DAMA 500 (5h)      | 95.5  | 94.5  | 95.69 | 96.25 | 95.56 | 95.44 | 95.62 | 94.94 | 95.69 | 95.25 | ***95.47(+3.49)***      | ***4.53***     |
 
-# Cell Segmentation
+##### Cell Segmentation
 | Methods | Box mAP          | Box mAP@50       | Box mAP@75       | Mask mAP         | Mask mAP@50      | Mask mAP@75 |
 |-----------------------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:-------------:|
 | ViT random init.            | 63.4             | 90.8             | 73.9             | 66.7             | 90.9             | 76.1        |
