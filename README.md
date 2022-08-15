@@ -1,7 +1,7 @@
 ## DAMA - Student Collaboration Improves Self-Supervised Learning: Dual-Loss Adaptive Masked Autoencoder for Multiplexed Immunofluorescence Brain Images Analysis
 This is a PyTorch/GPU implementation of the paper Student Collaboration Improves Self-Supervised Learning: Dual-Loss Adaptive Masked Autoencoder for Multiplexed Immunofluorescence Brain Images Analysis.
 
-* Please see the Supplementary Materials (included in github) for more results and figures. 
+* Please see the Supplementary Material (pdf) or folder ***img_results*** (this repo) for extensive results and figures. Supplementary Material can also be found in this repo.
 
 ![pipeline](img_results/DAMA_pipeline.JPG)
 
@@ -17,6 +17,7 @@ Below is the fine-tune result of DAMA compared to other state-of-the-art methods
 Please see the Supplementary Materials for more results and figures.
 
 **Cell Classification**
+
 |                    | 0     | 1     | 2     | 3     | 4     | 5     | 6     | 7     | 8     | 9     | Avg. &#8593;          | Err. &#8595; |
 |--------------------|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:--------------------------:|:-------------------:|
 | Random   init.     | 91.75 | 91.19 | 92.75 | 92.69 | 92.56 | 92.31 | 91.44 | 91.06 | 93    | 91.06 | 91.98(+0.00)             | 8.02              |
@@ -66,7 +67,7 @@ python submitit_pretrain.py --arch main_vit_tiny \
       --nodes 1 --ngpus 4
 ```
 
-### Fine-tuning DAMA
+### Fine-tuning DAMA for cell classification
 ```
 python submitit_finetune.py --arch main_vit_tiny \
       --batch_size 128 --epochs 150  \
@@ -76,3 +77,6 @@ python submitit_finetune.py --arch main_vit_tiny \
       --code_dir code_base_dir \
       --dist_eval --nodes 1 --ngpus 4
 ```
+
+### Fine-tuning DAMA for cell segmentation
+Please adapt [ViTDet: Exploring Plain Vision Transformer Backbones for Object Detection](https://arxiv.org/abs/2203.16527) from [Detectron2 repo ViTDet](https://github.com/facebookresearch/detectron2/tree/224cd2318fdb45b5e22bbb861ee9711ee52c8b75/projects/ViTDet)
