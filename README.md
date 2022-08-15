@@ -7,7 +7,7 @@ This is a PyTorch/GPU implementation of the paper Student Collaboration Improves
 Below is the fine-tune result of DAMA compared to other state-of-the-art methods pretrained on **brain cells dataset** and **ImageNet-1k**. Please see the paper for detailed results.
 
 ### Brain Cell datasets
-Manually collected set *Aug-30k* and noisy set *Real-30k*
+# Cell Classification
 |                    | 0     | 1     | 2     | 3     | 4     | 5     | 6     | 7     | 8     | 9     | Avg. &#8593;          | Err. &#8595; |
 |--------------------|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:--------------------------:|:-------------------:|
 | Random   init.     | 91.75 | 91.19 | 92.75 | 92.69 | 92.56 | 92.31 | 91.44 | 91.06 | 93    | 91.06 | 91.98(+0.00)             | 8.02              |
@@ -17,6 +17,19 @@ Manually collected set *Aug-30k* and noisy set *Real-30k*
 | DAMA-rand 500 (3h) | 94.69 | 94.19 | 94.81 | 95.81 | 94.50 | 94.00 | 94.88 | 94.69 | 95.25 | 94.81 | 94.76(+2.78) | 5.24  |
 | DAMA 500 (5h)      | 95.5  | 94.5  | 95.69 | 96.25 | 95.56 | 95.44 | 95.62 | 94.94 | 95.69 | 95.25 | ***95.47(+3.49)***      | ***4.53***     |
 
+# Cell Segmentation
+| Methods | Box mAP          | Box mAP@50       | Box mAP@75       | Mask mAP         | Mask mAP@50      | Mask mAP@75 |
+|-----------------------------|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:-------------:|
+| ViT random init.            | 63.4             | 90.8             | 73.9             | 66.7             | 90.9             | 76.1        |
+| Swin random init            | 63.2             | 90.6             | 73.7             | 66.3             | 90.5             | 76          |
+| MAE 800                     | 63.7             | 90.8             | 74.8             | 67.1             | ***91.4***      | 76.9        |
+| MAE 1600                    | 63.8             | 90               | 73.3             | 66.3             | 90.1             | 76.3        |
+| MOCO-v3 500                 | 63.2             | 90.5             | 73.2             | 66.5             | 91               | 75.9        |
+| MOCO-v3 1000                | 63.1             | 90.2             | 73               | 66.1             | 90.8             | 75.2        |
+| SIMMIM-ViT 800              | 63.6             | 91.1             | 74.1             | 66.9             | 91.1             | 76.1        |
+| SIMMIM-Swin 800             | 64.2 | 91.3 | 75.1 | 67               | 91.2             | ***77*** |
+| DAMA 500                    | 64.1             | 91.1             | 74.2             | 67.2 | 91.1             | ***77*** |
+| DAMA 1000                   | ***64.6***    | ***91.4***    | ***75.3***    | ***67.3***    | ***91.3*** | ***77*** |
 
 ### Pretrained on ImageNet-1k with ViT-Base
 Due to computational resource, DAMA is trained **only once** without any ablation experiment for ImageNet and with similar configuration as for trained the brain cell dataset.
