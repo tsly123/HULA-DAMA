@@ -27,7 +27,6 @@ __numpy_type_map = {
 
 # NOTE: all the function should recive the ndarray like image, should be W x H x C or W x H
 
-# 如果将所有输出的维度够搞成height，width，channel 那么可以不用to_tensor??, 不行
 def preserve_channel_dim(func):
     """Preserve dummy channel dim."""
 
@@ -276,7 +275,6 @@ def rotate(img, angle, center=None, scale=1.0):
 
 def resize(img, size, interpolation=Image.BILINEAR):
     """resize the image
-    TODO: opencv resize 之后图像就成了0~1了
     Arguments:
         img {ndarray} -- the input ndarray image
         size {int, iterable} -- the target size, if size is intger,  width and height will be resized to same \
