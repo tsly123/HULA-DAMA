@@ -28,7 +28,7 @@ import submitit
 
 def parse_args():
     classification_parser = classification.get_args_parser()
-    parser = argparse.ArgumentParser("Submitit for MAEIN finetune", parents=[classification_parser])
+    parser = argparse.ArgumentParser("Submitit for DAMA finetune", parents=[classification_parser])
     parser.add_argument("--ngpus", default=8, type=int, help="Number of gpus to request on each node")
     parser.add_argument("--nodes", default=1, type=int, help="Number of nodes to request")
     parser.add_argument("--timeout", default=4320, type=int, help="Duration of the job")
@@ -135,7 +135,7 @@ def main():
         **kwargs
     )
 
-    executor.update_parameters(name="maeinfo")
+    executor.update_parameters(name="DAMA")
 
     args.dist_url = get_init_file(args.job_dir).as_uri()
     args.output_dir = args.job_dir
