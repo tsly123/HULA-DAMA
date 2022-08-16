@@ -7,7 +7,7 @@ This is a PyTorch/GPU implementation of the paper Student Collaboration Improves
 
 DAMA utilizes contextual information and performs better than other methods. 
 
-![Seg_result](img_results/viz_seg_sample.jpg)
+![Seg_result](img_results/viz_seg_sample.JPG)
 
 * This repo is based on PyTorch=1.10.1 and timm=0.5.4
 
