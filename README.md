@@ -2,14 +2,21 @@
 This is a PyTorch/GPU implementation of the paper Student Collaboration Improves Self-Supervised Learning: Dual-Loss Adaptive Masked Autoencoder for Multiplexed Immunofluorescence Brain Images Analysis.
 
 * Please see the Supplementary Material (pdf) or folder ***img_results*** (this repo) for extensive results and figures. Supplementary Material can also be found in this repo.
+* This repo is based on PyTorch=1.10.1 and timm=0.5.4
 
 ![pipeline](img_results/DAMA_pipeline.JPG)
 
-DAMA utilizes contextual information and performs better than other methods. 
+### DAMA utilizes contextual information and performs better than other methods.
 
-![Seg_result](img_results/viz_seg_sample.JPG)
+<p align="center">
+<img src="img_results/seg_curves.JPG">
+Segmentation mask error analysis: overall-all-all Precision-Recall curves
+</p>
 
-* This repo is based on PyTorch=1.10.1 and timm=0.5.4
+<p align="center">
+<img src="img_results/viz_seg_sample.JPG">
+Visualization of segmentation results on validation set
+</p>
 
 Below is the fine-tune result of DAMA compared to other state-of-the-art methods pretrained on **brain cells dataset** and **ImageNet-1k**. 
 
